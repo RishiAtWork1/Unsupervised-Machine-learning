@@ -12,16 +12,3 @@ To Identify Major Customer Segments On Transnational Dataset Using Unsupervised 
 * We started with a simple binning and quantile based simple segmentation model first then moved to more complex models because simple implementation helps having a first glance at the data and know where/how to exploit it better.
 * Then we moved to k-means clustering and visualized the results with different number of clusters. As we know there is no assurance that k-means will lead to the global best solution. We moved forward and tried Hierarchical Clustering and DBSCAN clusterer as well.
 * Obtained the optimal number of clusters using silhouette analysis, Elbow method and dendrogram to majorly identify 4 segments for marketing, churn prediction, to define their value, loyalty, profitability etc for the business on the basis of their behavioral attributes. 
-
-### DESCRIPTION OF OBTAINED CLUSTERS
-
-| CLUSTERER             | CRITERION         | LOST POOR | LOST LOYAL | RECENTLY VISITED AVERAGE | AVERAGE | GOOD | BEST |
-| ----------------------|-------------------|-----------|------------|--------------------------|---------|------|------|
-| BINNING RFM SCORES    | QUANTILE          | YES       | ---        | ---                      | YES     | YES  | YES  |
-| RFM QUANTILE CUT      | QUANTILE          | YES       | YES        | ---                      | ---     | YES  | YES  |
-| K-MEANS               | SILHOUETTE ONLY   | YES       | ---        | ---                      | ---     | ---  | YES  |
-| K-MEANS               | ELBOW ONLY        | YES       | YES        | YES                      | YES     | ---  | YES  |
-| K-MEANS               | SILHOUETTE & ELBOW| YES       | YES        | YES                      | ---     | ---  | YES  |
-| AGGLOMERATIVE         | DENDOGRAM (Y = 70)| ---       | ---        | ---                      | YES     | ---  | YES  |
-| AGGLOMERATIVE         | DENDOGRAM (Y = 50)| YES       | YES        | ---                      | ---     | ---  | YES  |
-| DBSCAN                | EPSILON = 0.2     | YES       | YES        | ---                      | YES     | YES  | ---  |
